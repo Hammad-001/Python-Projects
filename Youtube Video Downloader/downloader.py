@@ -144,7 +144,7 @@ quality_label.pack(anchor="nw", padx=30)
 
 # Combobox for choices
 choices = ["High Quality", "Low Quality", "Audio Only"]
-choices_box = ttk.Combobox(root, width=35, values=choices)
+choices_box = ttk.Combobox(root, width=35, values=choices, state="readonly")
 choices_box.current(0)
 choices_box.place(x=230, y=203)
 
