@@ -8,11 +8,11 @@
     <title>{% block head %} {% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
     <link href="{{ url_for('static',filename='js/javascript.js') }}">
-    <style> 
-        body{
-            background: url("{{url_for('static',filename='img/background.jpg')}}") center center fixed;
+    <style>
+        body {
             color: brown;
             text-align: center;
+            background: url("{{url_for('static',filename='img/background.jpg')}}") center center fixed;
             background-size: cover;
             background-repeat: no-repeat;
         }
@@ -21,10 +21,6 @@
 
 <body>
     {% block body %} {% endblock %}
-    <form action="/" method="POST" id="form">
-        <input type="text" name="content" id="content">
-        <input type="submit" value="Add Task" id="submit">
-    </form>
 </body>
 
 </html>

@@ -8,9 +8,8 @@ h4 {
 
 .content {
     margin: 0 auto;
-    width: 600px;
-    height: 400px;
-    height: 600px;
+    width: 700px;
+    height: 470px;
     overflow-y: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -36,6 +35,8 @@ th {
 }
 
 td {
+    max-width: 250px;
+    word-break: break-all;
     text-align: center;
     padding: 10px;
 }
@@ -43,13 +44,13 @@ td {
 td a {
     text-decoration: none;
     color: white;
-    border: 1px solid white;
-    font-size: 1.2rem;
-    border-radius: 5px;
+    border: 1px solid brown;
+    font-size: 1rem;
+    padding: 5px;
+    width: 10px;
+    border-radius: 10px;
     background-color: brown;
 }
-
-form {}
 
 #submit {
     color: white;
@@ -74,4 +75,120 @@ form {}
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 0.8rem;
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+    body {
+        font-size: 1rem;
+    }
+    td a {
+        font-size: 0.8rem;
+        word-break: keep-all;
+        padding: 3px;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    h4 {
+        font-size: 1rem;
+    }
+    .content {
+        width: 500px;
+        height: 450px;
+    }
+    #submit {
+        width: 90px;
+        height: 30px;
+        border: 0px;
+        border-radius: 25px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    #content {
+        margin-right: 15px;
+        width: 250px;
+        height: 30px;
+        border-radius: 8px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width:480px) and (max-width:768px) {
+    body {
+        font-size: 0.8rem;
+    }
+    td a {
+        font-size: .6rem;
+        word-break: keep-all;
+        padding: 3px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h4 {
+        font-size: 1rem;
+    }
+    .content {
+        width: 400px;
+        height: 250px;
+    }
+    #submit {
+        width: 80px;
+        height: 22px;
+        border: 0px;
+        border-radius: 20px;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        font-size: 0.6rem;
+    }
+    #content {
+        margin-right: 10px;
+        width: 200px;
+        height: 22px;
+        border-radius: 6px;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width:480px) {
+    body {
+        font-size: 0.6rem;
+    }
+    td a {
+        font-size: 0.4rem;
+        word-break: keep-all;
+        padding: 1px;
+    }
+    h1 {
+        font-size: 1.6rem;
+    }
+    h4 {
+        font-size: 0.8rem;
+    }
+    .content {
+        width: 350px;
+        height: 200px;
+    }
+    #submit {
+        width: 70px;
+        height: 18px;
+        border: 0px;
+        border-radius: 15px;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        font-size: 0.6rem;
+    }
+    #content {
+        margin-right: 10px;
+        width: 160px;
+        height: 18px;
+        border-radius: 6px;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        font-size: 0.6rem;
+    }
 }
