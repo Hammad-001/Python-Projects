@@ -1,0 +1,12 @@
+<!DOCTYPE html> {% extends "base.html" %}{% block head %} Daily Task Manager {% endblock %} {% block body %}
+
+<div class="content">
+    <h1>Update Task</h1>
+
+    <form action="/update/{{task.id}}" method="POST">
+        <input type="text" name="content" id="content" value="{{task.task_content}}">
+        <input type="submit" value="Update Task" id="submit">
+    </form>
+</div>
+
+{% endblock %}}
