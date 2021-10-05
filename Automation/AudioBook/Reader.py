@@ -1,5 +1,5 @@
-# importing text-to-speach and pdf
-import pyttsx3, PyPDF2
+# importing text-to-speach and pdf and system
+import pyttsx3, PyPDF2, sys
 
 def pdfReader(book_path, start_page=0, uptil_page=-1):
     # opening book 
