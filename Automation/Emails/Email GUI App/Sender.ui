@@ -164,10 +164,10 @@
     </property>
     <property name="font">
      <font>
-      <family>Myriad Pro Light</family>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>8</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="cursor">
@@ -201,10 +201,10 @@ background-color:white;</string>
     </property>
     <property name="font">
      <font>
-      <family>Myriad Pro Light</family>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>8</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="cursor">
@@ -477,10 +477,10 @@ background-color:white;</string>
     </property>
     <property name="font">
      <font>
-      <family>Myriad Pro Light</family>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>8</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="cursor">
@@ -517,10 +517,10 @@ background-color:white;</string>
     </property>
     <property name="font">
      <font>
-      <family>Myriad Pro Light</family>
-      <pointsize>12</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>8</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="cursor">
@@ -638,7 +638,7 @@ background-color:white;</string>
      <string>Email Sender</string>
     </property>
    </widget>
-   <widget class="QTextEdit" name="textEdit">
+   <widget class="QTextEdit" name="EmailMessage_2">
     <property name="geometry">
      <rect>
       <x>110</x>
@@ -694,6 +694,29 @@ background-color:white;</string>
      <string>To</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="Help">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>20</y>
+      <width>41</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="statusTip">
+     <string/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:black;
+background-color:white;</string>
+    </property>
+    <property name="text">
+     <string>Help</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
@@ -702,7 +725,7 @@ background-color:white;</string>
   <tabstop>Password</tabstop>
   <tabstop>EmailTo</tabstop>
   <tabstop>EmailSubject</tabstop>
-  <tabstop>textEdit</tabstop>
+  <tabstop>EmailMessage_2</tabstop>
   <tabstop>Send</tabstop>
   <tabstop>Cancel</tabstop>
  </tabstops>
