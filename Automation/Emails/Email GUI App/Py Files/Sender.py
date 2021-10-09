@@ -9,8 +9,6 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from email.message import EmailMessage
-import smtplib
 
 
 class Ui_MainWindow(object):
@@ -18,30 +16,23 @@ class Ui_MainWindow(object):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setEnabled(True)
         MainWindow.resize(640, 449)
-        
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
-        
         MainWindow.setSizePolicy(sizePolicy)
         MainWindow.setMaximumSize(QtCore.QSize(640, 449))
-        
         MainWindow.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
         MainWindow.setLocale(QtCore.QLocale(QtCore.QLocale.English, QtCore.QLocale.Pakistan))
-        
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        
         self.EmailTo = QtWidgets.QLineEdit(self.centralwidget)
         self.EmailTo.setGeometry(QtCore.QRect(110, 160, 451, 20))
-        
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
         font.setPointSize(8)
         font.setBold(False)
         font.setWeight(50)
-        
         self.EmailTo.setFont(font)
         self.EmailTo.setCursor(QtGui.QCursor(QtCore.Qt.IBeamCursor))
         self.EmailTo.setLayoutDirection(QtCore.Qt.LeftToRight)
@@ -50,16 +41,13 @@ class Ui_MainWindow(object):
 "background-color:white;")
         self.EmailTo.setLocale(QtCore.QLocale(QtCore.QLocale.English, QtCore.QLocale.Pakistan))
         self.EmailTo.setObjectName("EmailTo")
-        
         self.EmailSubject = QtWidgets.QLineEdit(self.centralwidget)
         self.EmailSubject.setGeometry(QtCore.QRect(110, 190, 451, 20))
-        
         font = QtGui.QFont()
         font.setFamily("MS Shell Dlg 2")
         font.setPointSize(8)
         font.setBold(False)
         font.setWeight(50)
-        
         self.EmailSubject.setFont(font)
         self.EmailSubject.setCursor(QtGui.QCursor(QtCore.Qt.IBeamCursor))
         self.EmailSubject.setLayoutDirection(QtCore.Qt.LeftToRight)
@@ -68,32 +56,27 @@ class Ui_MainWindow(object):
 "background-color:white;")
         self.EmailSubject.setLocale(QtCore.QLocale(QtCore.QLocale.English, QtCore.QLocale.Pakistan))
         self.EmailSubject.setObjectName("EmailSubject")
-        
-        self.Cancel = QtWidgets.QPushButton(self.centralwidget)
-        self.Cancel.setGeometry(QtCore.QRect(390, 400, 75, 23))
-        self.Cancel.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.Cancel.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.Cancel.setAutoFillBackground(False)
-        self.Cancel.setStyleSheet("color:black;\n"
+        self.btnCancel = QtWidgets.QPushButton(self.centralwidget)
+        self.btnCancel.setGeometry(QtCore.QRect(390, 400, 75, 23))
+        self.btnCancel.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btnCancel.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.btnCancel.setAutoFillBackground(False)
+        self.btnCancel.setStyleSheet("color:black;\n"
 "background-color:white;")
-        self.Cancel.setAutoDefault(False)
-        self.Cancel.setFlat(False)
-        self.Cancel.setObjectName("Cancel")
-        
-        self.Send = QtWidgets.QPushButton(self.centralwidget)
-        self.Send.setGeometry(QtCore.QRect(480, 400, 75, 23))
-        
-        self.Send.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.Send.setFocusPolicy(QtCore.Qt.StrongFocus)
-        self.Send.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.Send.setAutoFillBackground(False)
-        self.Send.setStyleSheet("color:black;\n"
+        self.btnCancel.setAutoDefault(False)
+        self.btnCancel.setFlat(False)
+        self.btnCancel.setObjectName("btnCancel")
+        self.btnSend = QtWidgets.QPushButton(self.centralwidget)
+        self.btnSend.setGeometry(QtCore.QRect(480, 400, 75, 23))
+        self.btnSend.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btnSend.setFocusPolicy(QtCore.Qt.StrongFocus)
+        self.btnSend.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.btnSend.setAutoFillBackground(False)
+        self.btnSend.setStyleSheet("color:black;\n"
 "background-color:white;")
-        self.Send.setAutoDefault(False)
-        self.Send.setFlat(False)
-        self.Send.setObjectName("Send")
-        self.Send.clicked.connect(self.Send)
-        
+        self.btnSend.setAutoDefault(False)
+        self.btnSend.setFlat(False)
+        self.btnSend.setObjectName("btnSend")
         self.Password = QtWidgets.QLineEdit(self.centralwidget)
         self.Password.setGeometry(QtCore.QRect(370, 100, 191, 20))
         font = QtGui.QFont()
@@ -137,12 +120,12 @@ class Ui_MainWindow(object):
         self.labelToList = QtWidgets.QLabel(self.centralwidget)
         self.labelToList.setGeometry(QtCore.QRect(60, 160, 16, 21))
         self.labelToList.setObjectName("labelToList")
-        self.EmailSubject_2 = QtWidgets.QLabel(self.centralwidget)
-        self.EmailSubject_2.setGeometry(QtCore.QRect(60, 190, 41, 21))
-        self.EmailSubject_2.setObjectName("EmailSubject_2")
-        self.EmailMessage = QtWidgets.QLabel(self.centralwidget)
-        self.EmailMessage.setGeometry(QtCore.QRect(60, 220, 47, 13))
-        self.EmailMessage.setObjectName("EmailMessage")
+        self.labelEmailSubject = QtWidgets.QLabel(self.centralwidget)
+        self.labelEmailSubject.setGeometry(QtCore.QRect(60, 190, 41, 21))
+        self.labelEmailSubject.setObjectName("labelEmailSubject")
+        self.labelEmailMessage = QtWidgets.QLabel(self.centralwidget)
+        self.labelEmailMessage.setGeometry(QtCore.QRect(60, 220, 47, 13))
+        self.labelEmailMessage.setObjectName("labelEmailMessage")
         self.AppName = QtWidgets.QLabel(self.centralwidget)
         self.AppName.setGeometry(QtCore.QRect(210, 20, 221, 41))
         font = QtGui.QFont()
@@ -152,32 +135,31 @@ class Ui_MainWindow(object):
         font.setWeight(50)
         self.AppName.setFont(font)
         self.AppName.setObjectName("AppName")
-        self.EmailMessage_2 = QtWidgets.QTextEdit(self.centralwidget)
-        self.EmailMessage_2.setGeometry(QtCore.QRect(110, 220, 451, 161))
-        self.EmailMessage_2.setStatusTip("")
-        self.EmailMessage_2.setStyleSheet("color:black;\n"
+        self.EmailMessage = QtWidgets.QTextEdit(self.centralwidget)
+        self.EmailMessage.setGeometry(QtCore.QRect(110, 220, 451, 161))
+        self.EmailMessage.setStatusTip("")
+        self.EmailMessage.setStyleSheet("color:black;\n"
 "background-color:white;")
-        self.EmailMessage_2.setObjectName("EmailMessage_2")
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(290, 70, 41, 21))
+        self.EmailMessage.setObjectName("EmailMessage")
+        self.FromLabel = QtWidgets.QLabel(self.centralwidget)
+        self.FromLabel.setGeometry(QtCore.QRect(290, 70, 41, 21))
         font = QtGui.QFont()
         font.setPointSize(13)
-        self.label.setFont(font)
-        self.label.setObjectName("label")
-        self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(300, 130, 21, 21))
+        self.FromLabel.setFont(font)
+        self.FromLabel.setObjectName("FromLabel")
+        self.ToLabel = QtWidgets.QLabel(self.centralwidget)
+        self.ToLabel.setGeometry(QtCore.QRect(300, 130, 21, 21))
         font = QtGui.QFont()
         font.setPointSize(13)
-        self.label_2.setFont(font)
-        self.label_2.setObjectName("label_2")
-        self.Help = QtWidgets.QPushButton(self.centralwidget)
-        self.Help.setGeometry(QtCore.QRect(580, 20, 41, 23))
-        self.Help.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.Help.setStatusTip("")
-        self.Help.setStyleSheet("color:black;\n"
+        self.ToLabel.setFont(font)
+        self.ToLabel.setObjectName("ToLabel")
+        self.btnHelp = QtWidgets.QPushButton(self.centralwidget)
+        self.btnHelp.setGeometry(QtCore.QRect(580, 20, 41, 23))
+        self.btnHelp.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btnHelp.setStatusTip("")
+        self.btnHelp.setStyleSheet("color:black;\n"
 "background-color:white;")
-        self.Help.setObjectName("Help")
-        
+        self.btnHelp.setObjectName("btnHelp")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -185,47 +167,32 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
-        
-        # Tab Order
         MainWindow.setTabOrder(self.Email, self.Password)
         MainWindow.setTabOrder(self.Password, self.EmailTo)
         MainWindow.setTabOrder(self.EmailTo, self.EmailSubject)
-        MainWindow.setTabOrder(self.EmailSubject, self.EmailMessage_2)
-        MainWindow.setTabOrder(self.EmailMessage_2, self.Send)
-        MainWindow.setTabOrder(self.Send, self.Cancel)
-        
-    def Send(self):
-        print("Hello world")
-        # server = smtplib.SMTP('smtp.gmail.com', 587)
-        # server.starttls()
-        # # Make sure to give app access in your Google account
-        # server.login('Sender_Email', 'Sender_Email_password')
-        # email = EmailMessage()
-        # email['From'] = 'Sender_Email'
-        # email['To'] = receiver
-        # email['Subject'] = subject
-        # email.set_content(message)
-        # server.send_message(email)
+        MainWindow.setTabOrder(self.EmailSubject, self.EmailMessage)
+        MainWindow.setTabOrder(self.EmailMessage, self.btnSend)
+        MainWindow.setTabOrder(self.btnSend, self.btnCancel)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Email Sender"))
         self.EmailTo.setStatusTip(_translate("MainWindow", "Enter Receiver Email Here!"))
         self.EmailSubject.setStatusTip(_translate("MainWindow", "Enter Subject of the Email!"))
-        self.Cancel.setText(_translate("MainWindow", "Cancel"))
-        self.Send.setText(_translate("MainWindow", "Send"))
+        self.btnCancel.setText(_translate("MainWindow", "Cancel"))
+        self.btnSend.setText(_translate("MainWindow", "Send"))
         self.Password.setStatusTip(_translate("MainWindow", "Enter Sender Password Here!"))
         self.Email.setStatusTip(_translate("MainWindow", "Enter Sender Email Here!"))
         self.labelEmail.setText(_translate("MainWindow", "Email:"))
         self.labelPassword.setText(_translate("MainWindow", "Password:"))
         self.labelToList.setText(_translate("MainWindow", "To:"))
-        self.EmailSubject_2.setText(_translate("MainWindow", "Subject:"))
-        self.EmailMessage.setText(_translate("MainWindow", "Message:"))
+        self.labelEmailSubject.setText(_translate("MainWindow", "Subject:"))
+        self.labelEmailMessage.setText(_translate("MainWindow", "Message:"))
         self.AppName.setText(_translate("MainWindow", "Email Sender"))
-        self.EmailMessage_2.setPlaceholderText(_translate("MainWindow", "Enter Contet of Message!"))
-        self.label.setText(_translate("MainWindow", "From"))
-        self.label_2.setText(_translate("MainWindow", "To"))
-        self.Help.setText(_translate("MainWindow", "Help"))
+        self.EmailMessage.setPlaceholderText(_translate("MainWindow", "Enter Contet of Message!"))
+        self.FromLabel.setText(_translate("MainWindow", "From"))
+        self.ToLabel.setText(_translate("MainWindow", "To"))
+        self.btnHelp.setText(_translate("MainWindow", "Help"))
 
 
 if __name__ == "__main__":
