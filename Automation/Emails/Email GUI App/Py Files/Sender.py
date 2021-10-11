@@ -456,6 +456,7 @@ class Ui_MainWindow(object):
         This function collects data from the GUI required to
         send EMail.
         """
+        self.success.setText("")
         # collecting from Gui
         From = self.Email.text()
         Password = self.Password.text()
