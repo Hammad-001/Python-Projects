@@ -33,4 +33,4 @@ def pdfReader(book_path, start_page=0, uptil_page=-1):
         # run speaker
         speaker.runAndWait()
 
-pdfReader("D:\\Study\\Semester\\Semester 5\\Electronics 1\\data\\Electronic Devices 9th Edition by Floyd.pdf", 29 ,30)
+pdfReader("PythonPdf.pdf", 29 ,30)
