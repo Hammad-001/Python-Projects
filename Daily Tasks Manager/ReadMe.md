@@ -1,24 +1,36 @@
 ### How to Run File:
-0. Clone project (Daily Task Manager Files) into your device.
-1. Install flask and flask_sqlalchemy in your python using command: *pip install flask flask_sqlalchemy*
-2. Open command prompt in the project directory and type: *Flask run* or *python app.py*
-3. Then open *127.0.0.1:(port number = 5000)* (You can type here your local host port number)
-4.  Or type *localhost:portnumber* in your browser.
-5.  Start using App, Enjoy!
+- Clone project by running following line in the git bash or terminal.
+
+```
+git clone https://github.com/Hammad-001/Python-Projects
+cd "Daily Tasks Manager"
+```
+- Install flask and flask_sqlalchemy in your python using command
+``` 
+pip install flask, flask_sqlalchemy
+``` 
+- Open command prompt in the project directory and type
+```
+python app.py
+```
+- Then open *127.0.0.1:(port number = 5000)* (You can type here your local host port number)
+- Or type *localhost:portnumber* in your browser.
+- Start using App, Enjoy!
 ### Features:
-0. Simple app developed with flask performing CRUD Operations.
-1. You can add, delete, update the tasks in Daily Task Manager.
+- Simple app developed with flask performing CRUD Operations.
+- You can add, delete, update the tasks in Daily Task Manager.
 ### Folders:
-(FrontEnd)
+- [static](https://github.com/Hammad-001/Python-Projects/tree/main/Daily%20Tasks%20Manager/static)
+- [templates](https://github.com/Hammad-001/Python-Projects/tree/main/Daily%20Tasks%20Manager/templates)
 ### Static:
-0. #### css (style.css)
-1. #### img (background.jpg)
+- css [style.css](https://github.com/Hammad-001/Python-Projects/tree/main/Daily%20Tasks%20Manager/static/css)
+- img [background.jpg](https://github.com/Hammad-001/Python-Projects/tree/main/Daily%20Tasks%20Manager/static/img)
 ### Templates:
-0. #### index.html
-1. #### update.html
-2. #### base.html
+- [index.html](https://github.com/Hammad-001/Python-Projects/tree/main/Daily%20Tasks%20Manager/templates/base.html)
+- [update.html](https://github.com/Hammad-001/Python-Projects/tree/main/Daily%20Tasks%20Manager/templates/update.html)
+- [base.html](https://github.com/Hammad-001/Python-Projects/tree/main/Daily%20Tasks%20Manager/templates/base.html)
 
 ### app.py
-0 python file containing the web backend.
+- python file containing the web backend.
 ### test.db
-0. sqlite database file
+- sqlite database file
